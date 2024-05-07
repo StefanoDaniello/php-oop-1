@@ -3,12 +3,23 @@ include __DIR__ ."/Views/header.php";
 include __DIR__ ."/Models/Movie.php";
 include __DIR__ ."/Models/Book.php";
 $movies=[
-    new Movie('Star Wars','English', 10, 4.5, 'img/batmancontent.jpeg'),
-    new Movie('Harry Potter','English', 20, 7, 'img/batmancontent.jpeg'),
+    new Movie('Unlocking Android','English', 10, 4.5, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg'),
+    new Movie('Android in Action, Second Edition','English', 20, 7, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg'),
+    new Movie('Flex 3 in Action','English', 40, 10, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed.jpg'),
+    new Movie('Flex 4 in Action','English', 50, 10, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed2.jpg'),
+    new Movie('Collective Intelligence in Action','English', 60, 10, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/alag.jpg'),
+    new Movie('Batman','English', 70, 10, 'img/batmancontent.jpeg'),
 ];
+
+
+
 $books=[
-    new Book('Libro 1','100', 10, 5, 'img/thor2content.jpeg'),
-    new Book('Libro','200', 20, 10, 'img/thor2content.jpeg'),
+    new Book('Babylon A.D. 1','100', 10, 5, 'https://image.tmdb.org/t/p/w342/kt9nqD0uOar8IVE9191HXhWOXKI.jpg'),
+    new Book('Miraculous World: Paris, Tales of Shadybug and Claw Noir','200', 20, 10, 'https://image.tmdb.org/t/p/w342/A46SghdyD9y7qQUxB5zOslospJ7.jpg'),
+    new Book('Five Nights at Freddy\'s','300', 30, 10, 'https://image.tmdb.org/t/p/w342/j9mH1pr3IahtraTWxVEMANmPSGR.jpg'),
+    new Book('Zero Fucks Given','400', 40, 10, 'https://image.tmdb.org/t/p/w342/wLZ5jijVpOxHuBLmsICKLXwlldu.jpg'),
+    new Book('Thor','500', 50, 10, 'img/thor2content.jpeg'),
+    new Book('Batman','600', 60, 10, 'img/batmancontent.jpeg'),
 ];  
 ?>
 <main class="container">
