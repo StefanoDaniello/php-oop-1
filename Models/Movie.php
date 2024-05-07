@@ -9,7 +9,5 @@ class Movie extends Product
         parent::__construct($title,$price,$rating,$cover);
         $this->lenguage = $lenguage;
     }
-    public function printFlags(){
-        echo 'flag';
-    }
+    
 }

@@ -13,16 +13,14 @@ class Product{
         $this->cover = $cover;
     }
 
-    public function showAll(){
-        echo 'showAll';
-    }
-
-    public function showdetails(){
-        echo 'showDetails';
-    }
-
-    public function searchData(){
-        echo 'searchData';
+    public function getVote(){
+        $vote =ceil ($this->rating / 2);
+        $template ="<p>";
+        for($i=1;$i<=5;$i++){
+            $template .= $i <= $vote ? "<i class='fa-solid fa-star'></i>" : "<i class='fa-regular fa-star'></i>";
+        }
+        $template .="</p>";
+        return $template;
     }
 
 }
