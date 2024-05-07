@@ -1,5 +1,4 @@
 <?php
-include __DIR__ ."/Category.php";
 class Product{
     public string $title;
     public float $price;
@@ -21,6 +20,9 @@ class Product{
         }
         $template .="</p>";
         return $template;
+    }
+    public function getPrice(){
+        return $this->price ."€";
     }
 
 }

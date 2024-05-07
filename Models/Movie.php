@@ -9,5 +9,9 @@ class Movie extends Product
         parent::__construct($title,$price,$rating,$cover);
         $this->lenguage = $lenguage;
     }
-    
+    public function getflag(){
+        $prova = $this->lenguage;
+        $flag="<img src='https://flagcdn.com/w20/{$prova}.png'>";
+        return $flag;
+    }
 }

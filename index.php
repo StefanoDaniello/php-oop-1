@@ -3,12 +3,12 @@ include __DIR__ ."/Views/header.php";
 include __DIR__ ."/Models/Movie.php";
 include __DIR__ ."/Models/Book.php";
 $movies=[
-    new Movie('Unlocking Android','English', 10, 4.5, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg'),
-    new Movie('Android in Action, Second Edition','English', 20, 7, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg'),
-    new Movie('Flex 3 in Action','English', 40, 10, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed.jpg'),
-    new Movie('Flex 4 in Action','English', 50, 10, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed2.jpg'),
-    new Movie('Collective Intelligence in Action','English', 60, 10, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/alag.jpg'),
-    new Movie('Batman','English', 70, 10, 'img/batmancontent.jpeg'),
+    new Movie('Unlocking Android','gb', 10, 4.5, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson.jpg'),
+    new Movie('Android in Action, Second Edition','gb', 20, 7, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ableson2.jpg'),
+    new Movie('Flex 3 in Action','gb', 40, 10, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed.jpg'),
+    new Movie('Flex 4 in Action','gb', 50, 10, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/ahmed2.jpg'),
+    new Movie('Collective Intelligence in Action','gb', 60, 10, 'https://s3.amazonaws.com/AKIAJC5RLADLUMVRPFDQ.book-thumb-images/alag.jpg'),
+    new Movie('Batman','gb', 70, 10, 'img/batmancontent.jpeg'),
 ];
 
 
@@ -31,9 +31,9 @@ $books=[
                 <img src="<?= $movie->cover?>" class="card-img-top" alt="<?= $movie->title?>">
                 <div class="card-body">
                     <h5 class="card-title"><?= $movie->title?></h5>
-                    <p class="card-text"><?= $movie->lenguage?></p>
+                    <p class="card-text"><?= $movie->getflag()?></p>
                     <?= $movie->getVote()?>
-                    <p>Price: <?= $movie->price?></p>
+                    <p>Price: <?= $movie->getPrice()?></p>
                 </div>
             </div>
         </div>
@@ -49,7 +49,8 @@ $books=[
                 <div class="card-body">
                     <h5 class="card-title"><?= $book->title?></h5>
                     <?= $book->getVote()?>
-                    <p>Price: <?= $book->price?></p>
+                    <p>Price: <?= $book->getPrice()
+                    ?></p>
                 </div>
             </div>
         </div>
