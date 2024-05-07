@@ -2,16 +2,46 @@
 include __DIR__ ."/Views/header.php";
 include __DIR__ ."/Models/Movie.php";
 include __DIR__ ."/Models/Book.php";
+$movies=[
+    new Movie('Star Wars','English', 10, 4.5, 'img/batmancontent.jpeg'),
+    new Movie('Harry Potter','English', 20, 7, 'img/batmancontent.jpeg'),
+];
+$books=[
+    new Book('Libro','100', 10, 4.5, 'img/thor2content.jpeg'),
+    new Book('Libro','200', 20, 7, 'img/thor2content.jpeg'),
+];  
 ?>
 <main class="container">
-    <?php
-        // $action = new Category();
-        // $action->name = "Action";
-        $starWars = new Movie('Star Wars','English', 10, 4.5, 'https://www.imdb.com/title/tt0076759/');
-        echo $starWars->title;
-        $starWars->showAll();
-        $libro = new Book('Libro','100', 10, 4.5, 'https://www.imdb.com/title/tt0076759/');
-        echo $libro->numPages;
-        $libro->showAll();
-    ?>
+    <h2>Movies</h2>
+    <div class="row">
+        <?php foreach($movies as $movie){?>
+        <div class="col-12 col-md-4 col-lg-3 ">
+            <div class="card">
+                <img src="<?= $movie->cover?>" class="card-img-top" alt="<?= $movie->title?>">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $movie->title?></h5>
+                    <p class="card-text"><?= $movie->lenguage?></p>
+                    <p>Rating: <?= $movie->rating?></p>
+                    <p>Price: <?= $movie->price?></p>
+                </div>
+            </div>
+        </div>
+        <?php }?>  
+    </div>
+   
+    <h2>Books</h2>
+    <div class="row">
+        <?php foreach($books as $book){?>
+        <div class="col-12 col-md-4 col-lg-3 ">
+            <div class="card">
+                <img src="<?= $book->cover?>" class="card-img-top" alt="<?= $book->title?>">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $book->title?></h5>
+                    <p>Rating: <?= $book->rating?></p>
+                    <p>Price: <?= $book->price?></p>
+                </div>
+            </div>
+        </div>
+        <?php }?>  
+    </div>
 </main>

@@ -2,7 +2,6 @@
 include __DIR__ ."/Category.php";
 class Product{
     public string $title;
-    // public Category $category;
     public float $price;
     public float $rating;
     public string $cover;
@@ -11,7 +10,6 @@ class Product{
         $this->title = $title;
         $this->price = $price;
         $this->rating = $rating;
-        
         $this->cover = $cover;
     }
 
